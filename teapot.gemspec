@@ -1,8 +1,6 @@
-require File.join(File.dirname(__FILE__), "lib", "teapot")
-
 TEAPOT_GEM_SPEC = Gem::Specification.new do |s|
   s.name     = "teapot"
-  s.version  = Teapot::VERSION
+  s.version  = "1.0"
   s.date     = "2009-01-15"
   s.summary  = s.description = "Rack middleware to help you, as a teapot, comply with HTCPCP/1.0: the Hyper Text Coffee Pot Control Protocol"
   s.email    = "t.lucas@toolmantim.com"
