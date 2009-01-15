@@ -6,8 +6,6 @@
 #
 #   use Teapot, "Lady Grey"
 class Teapot
-  VERSION = "1.0.0"
-
   def initialize(app, tea="English Breakfast") #:nodoc:
     @app, @tea = app, tea
   end
