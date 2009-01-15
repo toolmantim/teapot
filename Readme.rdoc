@@ -1,0 +1,28 @@
+= teapot
+
+It's imperative to respond correctly to coffee machine BREW requests when you are, in fact, a teapot. This piece of Rack middleware will ensure you comply with HTCPCP/1.0: the Hyper Text Coffee Pot Control Protocol.
+
+For more information see http://www.ietf.org/rfc/rfc2324.txt
+
+== INSTALL
+
+  sudo gem install teapot
+
+== USAGE
+
+Simply <tt>require</tt> and <tt>use</tt> from your rackup file (e.g. <tt>config.ru</tt>):
+
+  require 'rubygems'
+  require 'teapot'
+
+  use Teapot
+
+Your Rack application will now serve English Breakfast and respond with a <tt>418 I'm a teapot</tt> if it receives any <tt>BREW</tt> or <tt>application/coffee-pot-command</tt> requests.
+
+Tea connoisseurs may wish to refer to Teapot for a finer selection of tea.
+
+== BREWING
+
+You can perform a BREW request using curl's request method flag <tt>-X</tt>:
+
+  curl -i -X BREW myrackapp.com
