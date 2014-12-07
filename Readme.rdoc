@@ -19,7 +19,9 @@ Simply <tt>require</tt> and <tt>use</tt> from your rackup file (e.g. <tt>config.
 
 Your Rack application will now serve English Breakfast and respond with a <tt>418 I'm a teapot</tt> if it receives any <tt>BREW</tt> or <tt>application/coffee-pot-command</tt> requests.
 
-Tea connoisseurs may wish to refer to Teapot for a finer selection of tea.
+Hater of English Breakfast? You're in luck—just pass in your preferred brew.
+
+  use Teapot, "Lady Grey"
 
 == BREWING
 
