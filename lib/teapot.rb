@@ -11,7 +11,7 @@ class Teapot
   end
   def call(env) #:nodoc:
     if env["REQUEST_METHOD"] == "BREW" || env["Content-Type"] == "application/coffee-pot-command"
-      ["418 I'm a teapot", {}, "Care for a cup of #{@tea}?"]
+      ["418 I'm a teapot", {}, ["Care for a cup of #{@tea}?"]]
     else
       @app.call(env)
     end
