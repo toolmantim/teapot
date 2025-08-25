@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Rack middleware to respond to BREW and coffee-pot-command requests. Use in a rackup file like so:
 #
 #   use Teapot
@@ -6,7 +8,7 @@
 #
 #   use Teapot, "Lady Grey"
 class Teapot
-  def initialize(app, tea="English Breakfast") #:nodoc:
+  def initialize(app, tea = "English Breakfast") #:nodoc:
     @app, @tea = app, tea
   end
   def call(env) #:nodoc:

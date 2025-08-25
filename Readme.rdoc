@@ -6,13 +6,12 @@ For more information see http://www.ietf.org/rfc/rfc2324.txt
 
 == INSTALL
 
-  sudo gem install toolmantim-teapot --source http://gems.github.com
+  gem install teapot
 
 == USAGE
 
 Simply <tt>require</tt> and <tt>use</tt> from your rackup file (e.g. <tt>config.ru</tt>):
 
-  require 'rubygems'
   require 'teapot'
 
   use Teapot
