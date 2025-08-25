@@ -1,9 +1,7 @@
-require 'test/unit'
-
-require 'rubygems'
+require 'minitest/autorun'
 require 'rack/mock'
 
-require File.join(File.dirname(__FILE__), "..", "lib", "teapot")
+require_relative '../lib/teapot'
 
 class DummyApp
   def call(env)
@@ -11,7 +9,7 @@ class DummyApp
   end
 end
 
-class TeapotTest < Test::Unit::TestCase
+class TeapotTest < Minitest::Test
   def test_returns_418_with_content_type_coffee_pot_command
     req = Rack::MockRequest.new(Teapot.new(DummyApp.new, "English Breakfast"))
     res = req.get("", {"Content-Type" => "application/coffee-pot-command"})
