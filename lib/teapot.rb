@@ -1,4 +1,4 @@
-# Rack middleware to respond to BREW and coffee-pot-command requests. Use in a rackup file like so:
+# Rack middleware to respond to BREW requests or requests with Content-Type `application/coffee-pot-command`. Use in a rackup file like so:
 #
 #   use Teapot
 #
