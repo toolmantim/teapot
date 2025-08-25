@@ -32,4 +32,12 @@ class TeapotTest < Test::Unit::TestCase
     res = req.request("BREW")
     assert_equal "Care for a cup of Lady Grey?", res.body
   end
+
+  def test_passes_through_normal_get_request
+    dummy_app = DummyApp.new
+    req = Rack::MockRequest.new(Teapot.new(dummy_app))
+    res = req.get("/")
+    assert_equal 200, res.status
+    assert_equal dummy_app.call({})[2], res.body
+  end
 end
